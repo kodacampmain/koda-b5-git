@@ -19,3 +19,40 @@ Menyimpan seluruh staging menjadi permanen, pesan commit berdasarkan [convention
 $ git commit
 $ git commit -m "<pesan>"
 ```
+
+## Pengecekan Status Working Directory
+Bisa digunakan untuk melihat status baik yang sudah di staging area ataupun belum
+```sh
+$ git status
+```
+Bisa digunakan untuk melihat riwayat/history commit
+```sh
+$ git log
+```
+
+## Manajemen Git Remote
+```sh
+$ git remote <command> <argument>
+```
+Digunakan untuk menghubungkan antara git yang di komputer lokal dengan git yang ada di penyedia layanan git (github, gitlab, dll.)
+```sh
+$ git remote add <alias_remote> <link_alamat_repo>
+```
+Digunakan untuk melihat list remote
+```sh
+$ git remote [-v]
+```
+Digunakan untuk melihat isi dari alias remote
+```sh
+$ git remote get-url <alias_remote>
+```
+
+## Synchronization
+Digunakan untuk sinkronisasi dari lokal ke remote
+```sh
+$ git push [-u] <tujuan_remote> <branch_local>
+```
+Digunakan untuk sinkronisasi dari remote ke lokal
+```sh
+$ git pull <target_remote> <branch_remote>
+```
