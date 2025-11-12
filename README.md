@@ -168,3 +168,17 @@ $ git merge <nama_branch_sumber>
 ```sh
 $ git push <nama_remote> <nama_branch_sumber>
 ```
+
+## Version Tagging
+
+Menandai sekumpulan commit dengan sebuah nama. Penamaan mengikuti SemVer [![SemVer](<https://semver.org/assets/500x500(light).jpg>)](https://semver.org/)
+
+```sh
+$ git tag <nama_tag>
+```
+
+Melihat list tag
+
+```sh
+$ git tag
+```

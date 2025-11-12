@@ -5,7 +5,7 @@ const inputEmail = "mail@mail.com";
 const inputPass = "root";
 
 if (inputEmail === email && inputPass === password) {
-  console.log("Login Berhasil");
+  console.log("Login Success");
 } else {
-  console.log("Email/Password salah");
+  console.log("Wrong Email/Password");
 }
