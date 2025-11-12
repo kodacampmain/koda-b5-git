@@ -39,6 +39,7 @@ $ git log
 ```
 
 Bisa digunakan untuk melihat riwayat/history commit versi private
+
 ```sh
 $ git reflog
 ```
@@ -93,14 +94,77 @@ Ketika di clone, link_remote langsung di set menjadi remote origin
 
 ## Undoing Changes
 
-Konsep membalikkan waktu ke <span style="background-color: yellow;color:black">***id_commit***</span> tertentu untuk merubah history/riwayat git. <span style="background-color: yellow;color:black">***id_commit***</span> menjadi ***HEAD*** yang terbaru
+Konsep membalikkan waktu ke <span style="background-color: yellow;color:black">**_id_commit_**</span> tertentu untuk merubah history/riwayat git. <span style="background-color: yellow;color:black">**_id_commit_**</span> menjadi **_HEAD_** yang terbaru
 
 ```sh
 $ git reset <id_commit>
 ```
 
-Konsep yang menghilangkan history dengan <span style="background-color: yellow;color:black">***id_commit***</span> tertentu dengan history baru
+Konsep yang menghilangkan history dengan <span style="background-color: yellow;color:black">**_id_commit_**</span> tertentu dengan history baru
 
 ```sh
 $ git revert <id_commit>
+```
+
+## Branching
+
+Manajemen Branching
+
+```sh
+$ git branch [<option>] [<argumen>]
+```
+
+Membuat branch
+
+```sh
+$ git branch <nama_branch>
+```
+
+Mengubah nama branch
+
+```sh
+$ git branch -m <nama_branch_lama> <nama_branch_baru>
+```
+
+Menghapus branch
+
+```sh
+$ git branch -d <nama_branch>
+```
+
+Berpindah branch
+
+```sh
+$ git checkout <nama_branch>
+```
+
+Berpindah branch sembari membuatnya (kalau belum ada)
+
+```sh
+$ git checkout -b <nama_branch>
+```
+
+Menyatukan branch (merge) dari sumber ke tujuan
+
+1. fast-forward<br>
+   Ketika perubahan hanya terjadi di salah satu branch
+
+```sh
+$ git checkout <nama_branch_tujuan>
+$ git merge <nama_branch_sumber>
+```
+
+2. merge commit<br>
+   Ketika perubahan terjadi pada masing-masing branch
+
+```sh
+$ git checkout <nama_branch_tujuan>
+$ git merge <nama_branch_sumber>
+```
+
+3. pull-request<br>
+   Dilakukan menggunakan fitur GitHub, jadi branch sumber harus di push ke GitHub
+
+```sh
+$ git push <nama_remote> <nama_branch_sumber>
 ```
