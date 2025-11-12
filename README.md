@@ -39,6 +39,7 @@ $ git log
 ```
 
 Bisa digunakan untuk melihat riwayat/history commit versi private
+
 ```sh
 $ git reflog
 ```
@@ -93,14 +94,28 @@ Ketika di clone, link_remote langsung di set menjadi remote origin
 
 ## Undoing Changes
 
-Konsep membalikkan waktu ke <span style="background-color: yellow;color:black">***id_commit***</span> tertentu untuk merubah history/riwayat git. <span style="background-color: yellow;color:black">***id_commit***</span> menjadi ***HEAD*** yang terbaru
+Konsep membalikkan waktu ke <span style="background-color: yellow;color:black">**_id_commit_**</span> tertentu untuk merubah history/riwayat git. <span style="background-color: yellow;color:black">**_id_commit_**</span> menjadi **_HEAD_** yang terbaru
 
 ```sh
 $ git reset <id_commit>
 ```
 
-Konsep yang menghilangkan history dengan <span style="background-color: yellow;color:black">***id_commit***</span> tertentu dengan history baru
+Konsep yang menghilangkan history dengan <span style="background-color: yellow;color:black">**_id_commit_**</span> tertentu dengan history baru
 
 ```sh
 $ git revert <id_commit>
+```
+
+## Version Tagging
+
+Menandai sekumpulan commit dengan sebuah nama. Penamaan mengikuti SemVer [![SemVer](<https://semver.org/assets/500x500(light).jpg>)](https://semver.org/)
+
+```sh
+$ git tag <nama_tag>
+```
+
+Melihat list tag
+
+```sh
+$ git tag
 ```
