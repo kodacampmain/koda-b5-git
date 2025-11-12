@@ -6,7 +6,7 @@ export async function fetchUser() {
       throw new Error(`${response.status} ${response.statusText}`);
     }
     const result = await response.json();
-    console.log(result[0]);
+    console.log(result[1]);
   } catch (error) {
     console.log(error);
   }
